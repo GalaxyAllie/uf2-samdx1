@@ -343,7 +343,7 @@ END GROUP
                 0x0000000020002310                _estack = .
                 0x0000000020002310                . = ALIGN (0x4)
                 0x0000000020002310                _end = .
-OUTPUT(build/alliecat_candythecatacorn/update-bootloader-alliecat_candythecatacorn-v3.4.0-65-gdf89a1f-dirty.elf elf32-littlearm)
+OUTPUT(build/alliecat_candythecatacorn/update-bootloader-alliecat_candythecatacorn-v3.4.0-66-gc8f99de-dirty.elf elf32-littlearm)
 
 .debug_info     0x0000000000000000     0xdedd
  .debug_info    0x0000000000000000      0xf9b build/alliecat_candythecatacorn/flash_samd21.o

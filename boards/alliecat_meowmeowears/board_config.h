@@ -13,5 +13,7 @@
 #define USB_PID 0xEC30
 
 #define LED_PIN PIN_PA10
+#define BOARD_NEOPIXEL_PIN PIN_PA08
+#define BOARD_NEOPIXEL_COUNT 10
 
 #endif

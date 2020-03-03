@@ -105,12 +105,10 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 build/alliecat_meowmeowears/utils.o
  .text.writeNum
                 0x0000000000000000       0x38 build/alliecat_meowmeowears/utils.o
- .text.timerTick
-                0x0000000000000000       0x40 build/alliecat_meowmeowears/utils.o
  .text.led_signal
                 0x0000000000000000       0x2c build/alliecat_meowmeowears/utils.o
- .text.RGBLED_set_color
-                0x0000000000000000        0x2 build/alliecat_meowmeowears/utils.o
+ .text.timerTick
+                0x0000000000000000       0x40 build/alliecat_meowmeowears/utils.o
  .bss.timerLow  0x0000000000000000        0x4 build/alliecat_meowmeowears/utils.o
  COMMON         0x0000000000000000        0x8 build/alliecat_meowmeowears/utils.o
  .text          0x0000000000000000        0x0 build/alliecat_meowmeowears/selfmain.o
@@ -157,7 +155,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libn
 END GROUP
                 0x0000000000002000                STACK_SIZE = DEFINED (STACK_SIZE)?STACK_SIZE:DEFINED (__stack_size__)?__stack_size__:0x2000
 
-.text           0x0000000000002000     0x2664
+.text           0x0000000000002000     0x2704
                 0x0000000000002000                . = ALIGN (0x4)
                 0x0000000000002000                _sfixed = .
  *(.vectors .vectors.*)
@@ -222,85 +220,89 @@ END GROUP
                 0x0000000000002258                Reset_Handler
  .text.add_crc  0x0000000000002308       0x54 build/alliecat_meowmeowears/usart_sam_ba.o
                 0x0000000000002308                add_crc
- .text.delay    0x000000000000235c       0x10 build/alliecat_meowmeowears/utils.o
-                0x000000000000235c                delay
- .text.panic    0x000000000000236c        0x2 build/alliecat_meowmeowears/utils.o
-                0x000000000000236c                panic
- *fill*         0x000000000000236e        0x2 
- .text.resetIntoApp
-                0x0000000000002370       0x28 build/alliecat_meowmeowears/utils.o
-                0x0000000000002370                resetIntoApp
+ .text.neopixel_send_buffer_core
+                0x000000000000235c       0x36 build/alliecat_meowmeowears/utils.o
+ .text.delay    0x0000000000002392       0x10 build/alliecat_meowmeowears/utils.o
+                0x0000000000002392                delay
+ .text.panic    0x00000000000023a2        0x2 build/alliecat_meowmeowears/utils.o
+                0x00000000000023a2                panic
  .text.resetIntoBootloader
-                0x0000000000002398       0x28 build/alliecat_meowmeowears/utils.o
-                0x0000000000002398                resetIntoBootloader
+                0x00000000000023a4       0x28 build/alliecat_meowmeowears/utils.o
+                0x00000000000023a4                resetIntoBootloader
  .text.led_tick
-                0x00000000000023c0       0x80 build/alliecat_meowmeowears/utils.o
-                0x00000000000023c0                led_tick
+                0x00000000000023cc       0x80 build/alliecat_meowmeowears/utils.o
+                0x00000000000023cc                led_tick
  .text.led_init
-                0x0000000000002440       0x10 build/alliecat_meowmeowears/utils.o
-                0x0000000000002440                led_init
+                0x000000000000244c       0x10 build/alliecat_meowmeowears/utils.o
+                0x000000000000244c                led_init
+ .text.RGBLED_set_color
+                0x000000000000245c       0x64 build/alliecat_meowmeowears/utils.o
+                0x000000000000245c                RGBLED_set_color
+ .text.resetIntoApp
+                0x00000000000024c0       0x30 build/alliecat_meowmeowears/utils.o
+                0x00000000000024c0                resetIntoApp
  .text.setBootProt
-                0x0000000000002450       0xbc build/alliecat_meowmeowears/selfmain.o
-                0x0000000000002450                setBootProt
+                0x00000000000024f0       0xbc build/alliecat_meowmeowears/selfmain.o
+                0x00000000000024f0                setBootProt
  .text.startup.main
-                0x000000000000250c       0xc0 build/alliecat_meowmeowears/selfmain.o
-                0x000000000000250c                main
- .text          0x00000000000025cc       0x88 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
-                0x00000000000025cc                memcpy
+                0x00000000000025ac       0xc0 build/alliecat_meowmeowears/selfmain.o
+                0x00000000000025ac                main
+ .text          0x000000000000266c       0x88 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+                0x000000000000266c                memcpy
  *(.glue_7t)
- .glue_7t       0x0000000000002654        0x0 linker stubs
+ .glue_7t       0x00000000000026f4        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x0000000000002654        0x0 linker stubs
+ .glue_7        0x00000000000026f4        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
  .rodata.bootloader
-                0x0000000000002654     0x2000 build/alliecat_meowmeowears/selfdata.o
-                0x0000000000002654                bootloader
+                0x00000000000026f4     0x2000 build/alliecat_meowmeowears/selfdata.o
+                0x00000000000026f4                bootloader
  .rodata.bootloader_crcs
-                0x0000000000004654       0x10 build/alliecat_meowmeowears/selfdata.o
-                0x0000000000004654                bootloader_crcs
+                0x00000000000046f4       0x10 build/alliecat_meowmeowears/selfdata.o
+                0x00000000000046f4                bootloader_crcs
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000004664                . = ALIGN (0x4)
+                0x0000000000004704                . = ALIGN (0x4)
  *(.init)
-                0x0000000000004664                . = ALIGN (0x4)
-                0x0000000000004664                __preinit_array_start = .
+                0x0000000000004704                . = ALIGN (0x4)
+                0x0000000000004704                __preinit_array_start = .
  *(.preinit_array)
-                0x0000000000004664                __preinit_array_end = .
-                0x0000000000004664                . = ALIGN (0x4)
-                0x0000000000004664                __init_array_start = .
+                0x0000000000004704                __preinit_array_end = .
+                0x0000000000004704                . = ALIGN (0x4)
+                0x0000000000004704                __init_array_start = .
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
-                0x0000000000004664                __init_array_end = .
-                0x0000000000004664                . = ALIGN (0x4)
+                0x0000000000004704                __init_array_end = .
+                0x0000000000004704                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *crtend.o(.ctors)
-                0x0000000000004664                . = ALIGN (0x4)
-                0x0000000000004664                _efixed = .
+                0x0000000000004704                . = ALIGN (0x4)
+                0x0000000000004704                _efixed = .
                 [!provide]                        PROVIDE (__exidx_start = .)
 
-.vfp11_veneer   0x0000000000004664        0x0
- .vfp11_veneer  0x0000000000004664        0x0 linker stubs
+.vfp11_veneer   0x0000000000004704        0x0
+ .vfp11_veneer  0x0000000000004704        0x0 linker stubs
 
-.v4_bx          0x0000000000004664        0x0
- .v4_bx         0x0000000000004664        0x0 linker stubs
+.v4_bx          0x0000000000004704        0x0
+ .v4_bx         0x0000000000004704        0x0 linker stubs
 
-.iplt           0x0000000000004664        0x0
- .iplt          0x0000000000004664        0x0 build/alliecat_meowmeowears/flash_samd21.o
+.iplt           0x0000000000004704        0x0
+ .iplt          0x0000000000004704        0x0 build/alliecat_meowmeowears/flash_samd21.o
 
-.igot.plt       0x0000000000004664        0x0
- .igot.plt      0x0000000000004664        0x0 build/alliecat_meowmeowears/flash_samd21.o
+.igot.plt       0x0000000000004704        0x0
+ .igot.plt      0x0000000000004704        0x0 build/alliecat_meowmeowears/flash_samd21.o
 
-.rel.dyn        0x0000000000004664        0x0
- .rel.iplt      0x0000000000004664        0x0 build/alliecat_meowmeowears/flash_samd21.o
+.rel.dyn        0x0000000000004704        0x0
+ .rel.iplt      0x0000000000004704        0x0 build/alliecat_meowmeowears/flash_samd21.o
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
                 [!provide]                        PROVIDE (__exidx_end = .)
-                0x0000000000004664                . = ALIGN (0x4)
-                0x0000000000004664                _etext = .
+                0x0000000000004704                . = ALIGN (0x4)
+                0x0000000000004704                _etext = .
 
-.relocate       0x0000000020000000        0x4 load address 0x0000000000004664
+.relocate       0x0000000020000000        0x4 load address 0x0000000000004704
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _srelocate = .
  *(.ramfunc .ramfunc.*)
@@ -313,7 +315,7 @@ END GROUP
  *fill*         0x0000000020000002        0x2 
                 0x0000000020000004                _erelocate = .
 
-.bss            0x0000000020000004      0x308 load address 0x0000000000004668
+.bss            0x0000000020000004      0x308 load address 0x0000000000004708
                 0x0000000020000004                . = ALIGN (0x4)
                 0x0000000020000004                _sbss = .
                 0x0000000020000004                _szero = .
@@ -329,7 +331,7 @@ END GROUP
                 0x000000002000030c                _ebss = .
                 0x000000002000030c                _ezero = .
 
-.stack          0x000000002000030c     0x2004 load address 0x0000000000004970
+.stack          0x000000002000030c     0x2004 load address 0x0000000000004a10
                 0x0000000020000310                . = ALIGN (0x8)
  *fill*         0x000000002000030c        0x4 
                 0x0000000020000310                _sstack = .
@@ -339,38 +341,38 @@ END GROUP
                 0x0000000020002310                _estack = .
                 0x0000000020002310                . = ALIGN (0x4)
                 0x0000000020002310                _end = .
-OUTPUT(build/alliecat_meowmeowears/update-bootloader-alliecat_meowmeowears-v3.4.0-65-gdf89a1f-dirty.elf elf32-littlearm)
+OUTPUT(build/alliecat_meowmeowears/update-bootloader-alliecat_meowmeowears-v3.4.0-66-gc8f99de-dirty.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0xdd84
+.debug_info     0x0000000000000000     0xdf6c
  .debug_info    0x0000000000000000      0xf9b build/alliecat_meowmeowears/flash_samd21.o
  .debug_info    0x0000000000000f9b     0x231e build/alliecat_meowmeowears/init_samd21.o
  .debug_info    0x00000000000032b9     0x35c5 build/alliecat_meowmeowears/startup_samd21.o
  .debug_info    0x000000000000687e     0x3cf9 build/alliecat_meowmeowears/usart_sam_ba.o
- .debug_info    0x000000000000a577     0x121f build/alliecat_meowmeowears/utils.o
- .debug_info    0x000000000000b796     0x16cf build/alliecat_meowmeowears/selfmain.o
- .debug_info    0x000000000000ce65       0xe9 build/alliecat_meowmeowears/selfdata.o
- .debug_info    0x000000000000cf4e      0xe36 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_info    0x000000000000a577     0x1407 build/alliecat_meowmeowears/utils.o
+ .debug_info    0x000000000000b97e     0x16cf build/alliecat_meowmeowears/selfmain.o
+ .debug_info    0x000000000000d04d       0xe9 build/alliecat_meowmeowears/selfdata.o
+ .debug_info    0x000000000000d136      0xe36 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
 
-.debug_abbrev   0x0000000000000000     0x159c
+.debug_abbrev   0x0000000000000000     0x1669
  .debug_abbrev  0x0000000000000000      0x2c1 build/alliecat_meowmeowears/flash_samd21.o
  .debug_abbrev  0x00000000000002c1      0x32c build/alliecat_meowmeowears/init_samd21.o
  .debug_abbrev  0x00000000000005ed      0x25b build/alliecat_meowmeowears/startup_samd21.o
  .debug_abbrev  0x0000000000000848      0x48b build/alliecat_meowmeowears/usart_sam_ba.o
- .debug_abbrev  0x0000000000000cd3      0x366 build/alliecat_meowmeowears/utils.o
- .debug_abbrev  0x0000000000001039      0x335 build/alliecat_meowmeowears/selfmain.o
- .debug_abbrev  0x000000000000136e       0x7a build/alliecat_meowmeowears/selfdata.o
- .debug_abbrev  0x00000000000013e8      0x1b4 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_abbrev  0x0000000000000cd3      0x433 build/alliecat_meowmeowears/utils.o
+ .debug_abbrev  0x0000000000001106      0x335 build/alliecat_meowmeowears/selfmain.o
+ .debug_abbrev  0x000000000000143b       0x7a build/alliecat_meowmeowears/selfdata.o
+ .debug_abbrev  0x00000000000014b5      0x1b4 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
 
-.debug_loc      0x0000000000000000     0x126e
+.debug_loc      0x0000000000000000     0x12f7
  .debug_loc     0x0000000000000000      0x3a6 build/alliecat_meowmeowears/flash_samd21.o
  .debug_loc     0x00000000000003a6       0x78 build/alliecat_meowmeowears/init_samd21.o
  .debug_loc     0x000000000000041e       0x2b build/alliecat_meowmeowears/startup_samd21.o
  .debug_loc     0x0000000000000449      0x7d4 build/alliecat_meowmeowears/usart_sam_ba.o
- .debug_loc     0x0000000000000c1d      0x143 build/alliecat_meowmeowears/utils.o
- .debug_loc     0x0000000000000d60      0x1d3 build/alliecat_meowmeowears/selfmain.o
- .debug_loc     0x0000000000000f33      0x33b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_loc     0x0000000000000c1d      0x1cc build/alliecat_meowmeowears/utils.o
+ .debug_loc     0x0000000000000de9      0x1d3 build/alliecat_meowmeowears/selfmain.o
+ .debug_loc     0x0000000000000fbc      0x33b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
 
-.debug_aranges  0x0000000000000000      0x200
+.debug_aranges  0x0000000000000000      0x208
  .debug_aranges
                 0x0000000000000000       0x48 build/alliecat_meowmeowears/flash_samd21.o
  .debug_aranges
@@ -380,33 +382,33 @@ OUTPUT(build/alliecat_meowmeowears/update-bootloader-alliecat_meowmeowears-v3.4.
  .debug_aranges
                 0x00000000000000b0       0x88 build/alliecat_meowmeowears/usart_sam_ba.o
  .debug_aranges
-                0x0000000000000138       0x68 build/alliecat_meowmeowears/utils.o
+                0x0000000000000138       0x70 build/alliecat_meowmeowears/utils.o
  .debug_aranges
-                0x00000000000001a0       0x28 build/alliecat_meowmeowears/selfmain.o
+                0x00000000000001a8       0x28 build/alliecat_meowmeowears/selfmain.o
  .debug_aranges
-                0x00000000000001c8       0x18 build/alliecat_meowmeowears/selfdata.o
+                0x00000000000001d0       0x18 build/alliecat_meowmeowears/selfdata.o
  .debug_aranges
-                0x00000000000001e0       0x20 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+                0x00000000000001e8       0x20 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
 
-.debug_ranges   0x0000000000000000      0x1f8
+.debug_ranges   0x0000000000000000      0x230
  .debug_ranges  0x0000000000000000       0x70 build/alliecat_meowmeowears/flash_samd21.o
  .debug_ranges  0x0000000000000070       0x48 build/alliecat_meowmeowears/init_samd21.o
  .debug_ranges  0x00000000000000b8       0x20 build/alliecat_meowmeowears/startup_samd21.o
  .debug_ranges  0x00000000000000d8       0x78 build/alliecat_meowmeowears/usart_sam_ba.o
- .debug_ranges  0x0000000000000150       0x90 build/alliecat_meowmeowears/utils.o
- .debug_ranges  0x00000000000001e0       0x18 build/alliecat_meowmeowears/selfmain.o
+ .debug_ranges  0x0000000000000150       0xc8 build/alliecat_meowmeowears/utils.o
+ .debug_ranges  0x0000000000000218       0x18 build/alliecat_meowmeowears/selfmain.o
 
-.debug_line     0x0000000000000000     0x11b9
+.debug_line     0x0000000000000000     0x125f
  .debug_line    0x0000000000000000      0x23c build/alliecat_meowmeowears/flash_samd21.o
  .debug_line    0x000000000000023c      0x245 build/alliecat_meowmeowears/init_samd21.o
  .debug_line    0x0000000000000481      0x19c build/alliecat_meowmeowears/startup_samd21.o
  .debug_line    0x000000000000061d      0x3d2 build/alliecat_meowmeowears/usart_sam_ba.o
- .debug_line    0x00000000000009ef      0x2c4 build/alliecat_meowmeowears/utils.o
- .debug_line    0x0000000000000cb3      0x2b1 build/alliecat_meowmeowears/selfmain.o
- .debug_line    0x0000000000000f64       0x9c build/alliecat_meowmeowears/selfdata.o
- .debug_line    0x0000000000001000      0x1b9 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_line    0x00000000000009ef      0x36a build/alliecat_meowmeowears/utils.o
+ .debug_line    0x0000000000000d59      0x2b1 build/alliecat_meowmeowears/selfmain.o
+ .debug_line    0x000000000000100a       0x9c build/alliecat_meowmeowears/selfdata.o
+ .debug_line    0x00000000000010a6      0x1b9 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
 
-.debug_str      0x0000000000000000     0x2eea
+.debug_str      0x0000000000000000     0x2f55
  .debug_str     0x0000000000000000      0x73d build/alliecat_meowmeowears/flash_samd21.o
                                         0x82e (size before relaxing)
  .debug_str     0x000000000000073d      0x6da build/alliecat_meowmeowears/init_samd21.o
@@ -415,13 +417,13 @@ OUTPUT(build/alliecat_meowmeowears/update-bootloader-alliecat_meowmeowears-v3.4.
                                        0x1372 (size before relaxing)
  .debug_str     0x0000000000001ce8      0xc4f build/alliecat_meowmeowears/usart_sam_ba.o
                                        0x13f9 (size before relaxing)
- .debug_str     0x0000000000002937       0xc8 build/alliecat_meowmeowears/utils.o
-                                        0x899 (size before relaxing)
- .debug_str     0x00000000000029ff       0x7f build/alliecat_meowmeowears/selfmain.o
+ .debug_str     0x0000000000002937      0x141 build/alliecat_meowmeowears/utils.o
+                                        0x919 (size before relaxing)
+ .debug_str     0x0000000000002a78       0x71 build/alliecat_meowmeowears/selfmain.o
                                         0xa2e (size before relaxing)
- .debug_str     0x0000000000002a7e       0x27 build/alliecat_meowmeowears/selfdata.o
+ .debug_str     0x0000000000002ae9       0x27 build/alliecat_meowmeowears/selfdata.o
                                         0x206 (size before relaxing)
- .debug_str     0x0000000000002aa5      0x445 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_str     0x0000000000002b10      0x445 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
                                         0x918 (size before relaxing)
 
 .comment        0x0000000000000000       0xae
@@ -455,14 +457,14 @@ OUTPUT(build/alliecat_meowmeowears/update-bootloader-alliecat_meowmeowears-v3.4.
  .ARM.attributes
                 0x000000000000015e       0x2c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
 
-.debug_frame    0x0000000000000000      0x440
+.debug_frame    0x0000000000000000      0x464
  .debug_frame   0x0000000000000000       0xb4 build/alliecat_meowmeowears/flash_samd21.o
  .debug_frame   0x00000000000000b4       0x68 build/alliecat_meowmeowears/init_samd21.o
  .debug_frame   0x000000000000011c       0x4c build/alliecat_meowmeowears/startup_samd21.o
  .debug_frame   0x0000000000000168      0x184 build/alliecat_meowmeowears/usart_sam_ba.o
- .debug_frame   0x00000000000002ec       0xcc build/alliecat_meowmeowears/utils.o
- .debug_frame   0x00000000000003b8       0x58 build/alliecat_meowmeowears/selfmain.o
- .debug_frame   0x0000000000000410       0x30 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00000000000002ec       0xf0 build/alliecat_meowmeowears/utils.o
+ .debug_frame   0x00000000000003dc       0x58 build/alliecat_meowmeowears/selfmain.o
+ .debug_frame   0x0000000000000434       0x30 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
 
 Cross Reference Table
 

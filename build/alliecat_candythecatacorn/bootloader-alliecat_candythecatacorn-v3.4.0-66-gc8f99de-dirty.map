@@ -1,7 +1,5 @@
 Archive member included to satisfy reference by file (symbol)
 
-/usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_thumb1_case_uqi.o)
-                              build/alliecat_candythecatacorn/hid.o (__gnu_thumb1_case_uqi)
 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
                               build/alliecat_candythecatacorn/cdc_enumerate.o (memcpy)
 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
@@ -43,8 +41,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/alliecat_candythecatacorn/flash_samd21.o
  .data          0x0000000000000000        0x0 build/alliecat_candythecatacorn/flash_samd21.o
  .bss           0x0000000000000000        0x0 build/alliecat_candythecatacorn/flash_samd21.o
- .text.flash_erase_to_end
-                0x0000000000000000       0x1c build/alliecat_candythecatacorn/flash_samd21.o
+ .text.copy_words
+                0x0000000000000000       0x14 build/alliecat_candythecatacorn/flash_samd21.o
  .text.flash_write
                 0x0000000000000000       0x9c build/alliecat_candythecatacorn/flash_samd21.o
  .text          0x0000000000000000        0x0 build/alliecat_candythecatacorn/init_samd21.o
@@ -123,22 +121,12 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/alliecat_candythecatacorn/cdc_enumerate.o
  .data          0x0000000000000000        0x0 build/alliecat_candythecatacorn/cdc_enumerate.o
  .bss           0x0000000000000000        0x0 build/alliecat_candythecatacorn/cdc_enumerate.o
- .text.USB_Read
-                0x0000000000000000        0xa build/alliecat_candythecatacorn/cdc_enumerate.o
  .text.reset_ep
                 0x0000000000000000       0x24 build/alliecat_candythecatacorn/cdc_enumerate.o
  .text.stall_ep
                 0x0000000000000000       0x20 build/alliecat_candythecatacorn/cdc_enumerate.o
  .text.cdc_is_rx_ready
                 0x0000000000000000       0x20 build/alliecat_candythecatacorn/cdc_enumerate.o
- .text.cdc_write_buf
-                0x0000000000000000        0xe build/alliecat_candythecatacorn/cdc_enumerate.o
- .text.cdc_write_buf_xmd
-                0x0000000000000000        0xe build/alliecat_candythecatacorn/cdc_enumerate.o
- .text.cdc_read_buf
-                0x0000000000000000       0x1e build/alliecat_candythecatacorn/cdc_enumerate.o
- .text.cdc_read_buf_xmd
-                0x0000000000000000       0x22 build/alliecat_candythecatacorn/cdc_enumerate.o
  .text          0x0000000000000000        0x0 build/alliecat_candythecatacorn/fat.o
  .data          0x0000000000000000        0x0 build/alliecat_candythecatacorn/fat.o
  .bss           0x0000000000000000        0x0 build/alliecat_candythecatacorn/fat.o
@@ -160,33 +148,6 @@ Discarded input sections
                 0x0000000000000000        0x2 build/alliecat_candythecatacorn/sam_ba_monitor.o
  .text.sam_ba_putdata_term
                 0x0000000000000000        0x8 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .text.call_applet
-                0x0000000000000000       0x24 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .text.put_uint32
-                0x0000000000000000       0x16 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .text.sam_ba_monitor_run
-                0x0000000000000000      0x254 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .bss.b_sam_ba_interface_usart
-                0x0000000000000000        0x1 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .bss.src_buff_addr.11477
-                0x0000000000000000        0x4 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .rodata.fullVersion
-                0x0000000000000000       0x2a build/alliecat_candythecatacorn/sam_ba_monitor.o
- .rodata.sam_ba_monitor_run.str1.1
-                0x0000000000000000       0x10 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .debug_info    0x0000000000000000      0xdf6 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .debug_abbrev  0x0000000000000000      0x386 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .debug_loc     0x0000000000000000      0x1d5 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .debug_aranges
-                0x0000000000000000       0x40 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .debug_ranges  0x0000000000000000       0x60 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .debug_line    0x0000000000000000      0x2a5 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .debug_str     0x0000000000000000      0x7d2 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .comment       0x0000000000000000       0x58 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .debug_frame   0x0000000000000000       0x98 build/alliecat_candythecatacorn/sam_ba_monitor.o
- .ARM.attributes
-                0x0000000000000000       0x32 build/alliecat_candythecatacorn/sam_ba_monitor.o
- COMMON         0x0000000000000000       0x68 build/alliecat_candythecatacorn/sam_ba_monitor.o
  .text          0x0000000000000000        0x0 build/alliecat_candythecatacorn/uart_driver.o
  .data          0x0000000000000000        0x0 build/alliecat_candythecatacorn/uart_driver.o
  .bss           0x0000000000000000        0x0 build/alliecat_candythecatacorn/uart_driver.o
@@ -222,8 +183,15 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/alliecat_candythecatacorn/hid.o
  .data          0x0000000000000000        0x0 build/alliecat_candythecatacorn/hid.o
  .bss           0x0000000000000000        0x0 build/alliecat_candythecatacorn/hid.o
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_thumb1_case_uqi.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_thumb1_case_uqi.o)
+ .debug_info    0x0000000000000000      0x8e7 build/alliecat_candythecatacorn/hid.o
+ .debug_abbrev  0x0000000000000000      0x197 build/alliecat_candythecatacorn/hid.o
+ .debug_aranges
+                0x0000000000000000       0x18 build/alliecat_candythecatacorn/hid.o
+ .debug_line    0x0000000000000000      0x105 build/alliecat_candythecatacorn/hid.o
+ .debug_str     0x0000000000000000      0x5f2 build/alliecat_candythecatacorn/hid.o
+ .comment       0x0000000000000000       0x58 build/alliecat_candythecatacorn/hid.o
+ .ARM.attributes
+                0x0000000000000000       0x32 build/alliecat_candythecatacorn/hid.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
@@ -271,7 +239,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libn
 END GROUP
                 0x0000000000002000                STACK_SIZE = DEFINED (STACK_SIZE)?STACK_SIZE:DEFINED (__stack_size__)?__stack_size__:0x2000
 
-.text           0x0000000000000000     0x1ad4
+.text           0x0000000000000000     0x1b68
                 0x0000000000000000                . = ALIGN (0x4)
                 0x0000000000000000                _sfixed = .
  *(.vectors .vectors.*)
@@ -281,258 +249,261 @@ END GROUP
  .text.flash_erase_row
                 0x00000000000000b4       0x28 build/alliecat_candythecatacorn/flash_samd21.o
                 0x00000000000000b4                flash_erase_row
- .text.copy_words
-                0x00000000000000dc       0x14 build/alliecat_candythecatacorn/flash_samd21.o
-                0x00000000000000dc                copy_words
+ .text.flash_erase_to_end
+                0x00000000000000dc       0x1c build/alliecat_candythecatacorn/flash_samd21.o
+                0x00000000000000dc                flash_erase_to_end
  .text.flash_write_words
-                0x00000000000000f0       0x54 build/alliecat_candythecatacorn/flash_samd21.o
-                0x00000000000000f0                flash_write_words
+                0x00000000000000f8       0x54 build/alliecat_candythecatacorn/flash_samd21.o
+                0x00000000000000f8                flash_write_words
  .text.flash_write_row
-                0x0000000000000144       0x2e build/alliecat_candythecatacorn/flash_samd21.o
-                0x0000000000000144                flash_write_row
- *fill*         0x0000000000000172        0x2 
+                0x000000000000014c       0x2e build/alliecat_candythecatacorn/flash_samd21.o
+                0x000000000000014c                flash_write_row
+ *fill*         0x000000000000017a        0x2 
  .text.gclk_sync
-                0x0000000000000174       0x10 build/alliecat_candythecatacorn/init_samd21.o
+                0x000000000000017c       0x10 build/alliecat_candythecatacorn/init_samd21.o
  .text.dfll_sync
-                0x0000000000000184       0x10 build/alliecat_candythecatacorn/init_samd21.o
+                0x000000000000018c       0x10 build/alliecat_candythecatacorn/init_samd21.o
  .text.system_init
-                0x0000000000000194       0xcc build/alliecat_candythecatacorn/init_samd21.o
-                0x0000000000000194                system_init
+                0x000000000000019c       0xcc build/alliecat_candythecatacorn/init_samd21.o
+                0x000000000000019c                system_init
  .text.SysTick_Handler
-                0x0000000000000260        0x8 build/alliecat_candythecatacorn/init_samd21.o
-                0x0000000000000260                SysTick_Handler
+                0x0000000000000268        0x8 build/alliecat_candythecatacorn/init_samd21.o
+                0x0000000000000268                SysTick_Handler
  .text.Dummy_Handler
-                0x0000000000000268        0x2 build/alliecat_candythecatacorn/startup_samd21.o
-                0x0000000000000268                DMAC_Handler
-                0x0000000000000268                AC_Handler
-                0x0000000000000268                PendSV_Handler
-                0x0000000000000268                NMI_Handler
-                0x0000000000000268                SERCOM1_Handler
-                0x0000000000000268                ADC_Handler
-                0x0000000000000268                TCC1_Handler
-                0x0000000000000268                SERCOM2_Handler
-                0x0000000000000268                TCC0_Handler
-                0x0000000000000268                RTC_Handler
-                0x0000000000000268                EIC_Handler
-                0x0000000000000268                WDT_Handler
-                0x0000000000000268                TC4_Handler
-                0x0000000000000268                USB_Handler
-                0x0000000000000268                TC3_Handler
-                0x0000000000000268                Dummy_Handler
-                0x0000000000000268                PM_Handler
-                0x0000000000000268                SVC_Handler
-                0x0000000000000268                TCC2_Handler
-                0x0000000000000268                EVSYS_Handler
-                0x0000000000000268                SERCOM3_Handler
-                0x0000000000000268                I2S_Handler
-                0x0000000000000268                NVMCTRL_Handler
-                0x0000000000000268                SERCOM0_Handler
-                0x0000000000000268                DAC_Handler
-                0x0000000000000268                PTC_Handler
-                0x0000000000000268                TC5_Handler
-                0x0000000000000268                SYSCTRL_Handler
+                0x0000000000000270        0x2 build/alliecat_candythecatacorn/startup_samd21.o
+                0x0000000000000270                DMAC_Handler
+                0x0000000000000270                AC_Handler
+                0x0000000000000270                PendSV_Handler
+                0x0000000000000270                NMI_Handler
+                0x0000000000000270                SERCOM1_Handler
+                0x0000000000000270                ADC_Handler
+                0x0000000000000270                TCC1_Handler
+                0x0000000000000270                SERCOM2_Handler
+                0x0000000000000270                TCC0_Handler
+                0x0000000000000270                RTC_Handler
+                0x0000000000000270                EIC_Handler
+                0x0000000000000270                WDT_Handler
+                0x0000000000000270                TC4_Handler
+                0x0000000000000270                USB_Handler
+                0x0000000000000270                TC3_Handler
+                0x0000000000000270                Dummy_Handler
+                0x0000000000000270                PM_Handler
+                0x0000000000000270                SVC_Handler
+                0x0000000000000270                TCC2_Handler
+                0x0000000000000270                EVSYS_Handler
+                0x0000000000000270                SERCOM3_Handler
+                0x0000000000000270                I2S_Handler
+                0x0000000000000270                NVMCTRL_Handler
+                0x0000000000000270                SERCOM0_Handler
+                0x0000000000000270                DAC_Handler
+                0x0000000000000270                PTC_Handler
+                0x0000000000000270                TC5_Handler
+                0x0000000000000270                SYSCTRL_Handler
  .text.HardFault_Handler
-                0x000000000000026a        0x2 build/alliecat_candythecatacorn/startup_samd21.o
-                0x000000000000026a                HardFault_Handler
+                0x0000000000000272        0x2 build/alliecat_candythecatacorn/startup_samd21.o
+                0x0000000000000272                HardFault_Handler
  .text.Reset_Handler
-                0x000000000000026c       0xb0 build/alliecat_candythecatacorn/startup_samd21.o
-                0x000000000000026c                Reset_Handler
- .text.add_crc  0x000000000000031c       0x54 build/alliecat_candythecatacorn/usart_sam_ba.o
-                0x000000000000031c                add_crc
- .text.delay    0x0000000000000370       0x10 build/alliecat_candythecatacorn/utils.o
-                0x0000000000000370                delay
+                0x0000000000000274       0xb0 build/alliecat_candythecatacorn/startup_samd21.o
+                0x0000000000000274                Reset_Handler
+ .text.add_crc  0x0000000000000324       0x54 build/alliecat_candythecatacorn/usart_sam_ba.o
+                0x0000000000000324                add_crc
+ .text.delay    0x0000000000000378       0x10 build/alliecat_candythecatacorn/utils.o
+                0x0000000000000378                delay
  .text.writeNum
-                0x0000000000000380       0x38 build/alliecat_candythecatacorn/utils.o
-                0x0000000000000380                writeNum
+                0x0000000000000388       0x38 build/alliecat_candythecatacorn/utils.o
+                0x0000000000000388                writeNum
  .text.resetIntoBootloader
-                0x00000000000003b8       0x28 build/alliecat_candythecatacorn/utils.o
-                0x00000000000003b8                resetIntoBootloader
+                0x00000000000003c0       0x28 build/alliecat_candythecatacorn/utils.o
+                0x00000000000003c0                resetIntoBootloader
  .text.led_tick
-                0x00000000000003e0       0x80 build/alliecat_candythecatacorn/utils.o
-                0x00000000000003e0                led_tick
+                0x00000000000003e8       0x80 build/alliecat_candythecatacorn/utils.o
+                0x00000000000003e8                led_tick
  .text.led_signal
-                0x0000000000000460       0x2c build/alliecat_candythecatacorn/utils.o
-                0x0000000000000460                led_signal
+                0x0000000000000468       0x2c build/alliecat_candythecatacorn/utils.o
+                0x0000000000000468                led_signal
  .text.write_apa_byte
-                0x000000000000048c       0x28 build/alliecat_candythecatacorn/utils.o
-                0x000000000000048c                write_apa_byte
+                0x0000000000000494       0x28 build/alliecat_candythecatacorn/utils.o
+                0x0000000000000494                write_apa_byte
  .text.RGBLED_set_color
-                0x00000000000004b4       0x58 build/alliecat_candythecatacorn/utils.o
-                0x00000000000004b4                RGBLED_set_color
+                0x00000000000004bc       0x58 build/alliecat_candythecatacorn/utils.o
+                0x00000000000004bc                RGBLED_set_color
  .text.resetIntoApp
-                0x000000000000050c       0x34 build/alliecat_candythecatacorn/utils.o
-                0x000000000000050c                resetIntoApp
+                0x0000000000000514       0x34 build/alliecat_candythecatacorn/utils.o
+                0x0000000000000514                resetIntoApp
  .text.timerTick
-                0x0000000000000540       0x40 build/alliecat_candythecatacorn/utils.o
-                0x0000000000000540                timerTick
+                0x0000000000000548       0x40 build/alliecat_candythecatacorn/utils.o
+                0x0000000000000548                timerTick
  .text.led_init
-                0x0000000000000580       0x24 build/alliecat_candythecatacorn/utils.o
-                0x0000000000000580                led_init
+                0x0000000000000588       0x24 build/alliecat_candythecatacorn/utils.o
+                0x0000000000000588                led_init
  .text.AT91F_InitUSB
-                0x00000000000005a4      0x108 build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x00000000000005a4                AT91F_InitUSB
+                0x00000000000005ac      0x108 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x00000000000005ac                AT91F_InitUSB
  .text.USB_ReadCore
-                0x00000000000006ac       0xe0 build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x00000000000006ac                USB_ReadCore
+                0x00000000000006b4       0xe0 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x00000000000006b4                USB_ReadCore
+ .text.USB_Read
+                0x0000000000000794        0xa build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x0000000000000794                USB_Read
  .text.USB_ReadBlocking
-                0x000000000000078c       0x22 build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x000000000000078c                USB_ReadBlocking
- *fill*         0x00000000000007ae        0x2 
+                0x000000000000079e       0x22 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x000000000000079e                USB_ReadBlocking
  .text.USB_WriteCore
-                0x00000000000007b0       0x94 build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x00000000000007b0                USB_WriteCore
+                0x00000000000007c0       0x94 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x00000000000007c0                USB_WriteCore
  .text.USB_Write
-                0x0000000000000844        0xa build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x0000000000000844                USB_Write
- *fill*         0x000000000000084e        0x2 
+                0x0000000000000854        0xa build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x0000000000000854                USB_Write
+ *fill*         0x000000000000085e        0x2 
  .text.sendCtrl
-                0x0000000000000850       0x1c build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x0000000000000860       0x1c build/alliecat_candythecatacorn/cdc_enumerate.o
  .text.AT91F_USB_SendZlp
-                0x000000000000086c       0x10 build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x000000000000086c                AT91F_USB_SendZlp
- .text.USB_Ok   0x000000000000087c      0x46c build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x000000000000087c                USB_Ok
+                0x000000000000087c       0x10 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x000000000000087c                AT91F_USB_SendZlp
+ .text.USB_Ok   0x000000000000088c      0x3fc build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x000000000000088c                USB_Ok
  .text.usb_init
-                0x0000000000000ce8       0x20 build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x0000000000000ce8                usb_init
+                0x0000000000000c88       0x20 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x0000000000000c88                usb_init
+ .text.cdc_write_buf
+                0x0000000000000ca8        0xe build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x0000000000000ca8                cdc_write_buf
+ .text.cdc_write_buf_xmd
+                0x0000000000000cb6        0xe build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x0000000000000cb6                cdc_write_buf_xmd
+ .text.cdc_read_buf
+                0x0000000000000cc4       0x1e build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x0000000000000cc4                cdc_read_buf
+ .text.cdc_read_buf_xmd
+                0x0000000000000ce2       0x22 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x0000000000000ce2                cdc_read_buf_xmd
  .text.padded_memcpy
-                0x0000000000000d08       0x20 build/alliecat_candythecatacorn/fat.o
-                0x0000000000000d08                padded_memcpy
+                0x0000000000000d04       0x20 build/alliecat_candythecatacorn/fat.o
+                0x0000000000000d04                padded_memcpy
  .text.read_block
-                0x0000000000000d28      0x178 build/alliecat_candythecatacorn/fat.o
-                0x0000000000000d28                read_block
+                0x0000000000000d24      0x178 build/alliecat_candythecatacorn/fat.o
+                0x0000000000000d24                read_block
  .text.write_block
-                0x0000000000000ea0       0xe8 build/alliecat_candythecatacorn/fat.o
-                0x0000000000000ea0                write_block
+                0x0000000000000e9c       0xe8 build/alliecat_candythecatacorn/fat.o
+                0x0000000000000e9c                write_block
  .text.startup.main
-                0x0000000000000f88      0x12c build/alliecat_candythecatacorn/main.o
-                0x0000000000000f88                main
+                0x0000000000000f84      0x12c build/alliecat_candythecatacorn/main.o
+                0x0000000000000f84                main
  .text.udi_msc_clear_sense
-                0x00000000000010b4       0x1c build/alliecat_candythecatacorn/msc.o
+                0x00000000000010b0       0x1c build/alliecat_candythecatacorn/msc.o
  .text.handover_flash
-                0x00000000000010d0       0x34 build/alliecat_candythecatacorn/msc.o
+                0x00000000000010cc       0x34 build/alliecat_candythecatacorn/msc.o
  .text.try_read_cbw
-                0x0000000000001104       0x2c build/alliecat_candythecatacorn/msc.o
-                0x0000000000001104                try_read_cbw
+                0x0000000000001100       0x2c build/alliecat_candythecatacorn/msc.o
+                0x0000000000001100                try_read_cbw
  .text.udi_msc_csw_send
-                0x0000000000001130       0x14 build/alliecat_candythecatacorn/msc.o
-                0x0000000000001130                udi_msc_csw_send
+                0x000000000000112c       0x14 build/alliecat_candythecatacorn/msc.o
+                0x000000000000112c                udi_msc_csw_send
  .text.udi_msc_csw_process
-                0x0000000000001144       0x38 build/alliecat_candythecatacorn/msc.o
+                0x0000000000001140       0x38 build/alliecat_candythecatacorn/msc.o
  .text.udi_msc_data_send
-                0x000000000000117c       0x6c build/alliecat_candythecatacorn/msc.o
+                0x0000000000001178       0x6c build/alliecat_candythecatacorn/msc.o
  .text.udi_msc_spc_mode_sense
-                0x00000000000011e8       0x70 build/alliecat_candythecatacorn/msc.o
+                0x00000000000011e4       0x70 build/alliecat_candythecatacorn/msc.o
  .text.udi_msc_sbc_trans
-                0x0000000000001258       0xc8 build/alliecat_candythecatacorn/msc.o
+                0x0000000000001254       0xc8 build/alliecat_candythecatacorn/msc.o
  .text.process_msc
-                0x0000000000001320      0x140 build/alliecat_candythecatacorn/msc.o
-                0x0000000000001320                process_msc
+                0x000000000000131c      0x13c build/alliecat_candythecatacorn/msc.o
+                0x000000000000131c                process_msc
  .text.handoverPrep
-                0x0000000000001460       0x24 build/alliecat_candythecatacorn/msc.o
-                0x0000000000001460                handoverPrep
+                0x0000000000001458       0x24 build/alliecat_candythecatacorn/msc.o
+                0x0000000000001458                handoverPrep
  .text.handover
-                0x0000000000001484       0xe4 build/alliecat_candythecatacorn/msc.o
- .text.recv_hf2
-                0x0000000000001568       0x56 build/alliecat_candythecatacorn/hid.o
-                0x0000000000001568                recv_hf2
- .text.send_hf2
-                0x00000000000015be       0x46 build/alliecat_candythecatacorn/hid.o
-                0x00000000000015be                send_hf2
- .text.send_hf2_response
-                0x0000000000001604       0x14 build/alliecat_candythecatacorn/hid.o
-                0x0000000000001604                send_hf2_response
- .text.process_core
-                0x0000000000001618       0xf8 build/alliecat_candythecatacorn/hid.o
-                0x0000000000001618                process_core
- .text.process_hid
-                0x0000000000001710       0x28 build/alliecat_candythecatacorn/hid.o
-                0x0000000000001710                process_hid
- .text.hidHandoverLoop
-                0x0000000000001738       0x24 build/alliecat_candythecatacorn/hid.o
-                0x0000000000001738                hidHandoverLoop
- .text          0x000000000000175c       0x14 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_thumb1_case_uqi.o)
-                0x000000000000175c                __gnu_thumb1_case_uqi
- .text          0x0000000000001770       0x88 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
-                0x0000000000001770                memcpy
- .text          0x00000000000017f8       0x9c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
-                0x00000000000017f8                memset
- .text          0x0000000000001894       0x64 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
-                0x0000000000001894                strlen
+                0x000000000000147c       0xe4 build/alliecat_candythecatacorn/msc.o
+ .text.call_applet
+                0x0000000000001560       0x24 build/alliecat_candythecatacorn/sam_ba_monitor.o
+                0x0000000000001560                call_applet
+ .text.put_uint32
+                0x0000000000001584       0x16 build/alliecat_candythecatacorn/sam_ba_monitor.o
+                0x0000000000001584                put_uint32
+ *fill*         0x000000000000159a        0x2 
+ .text.sam_ba_monitor_run
+                0x000000000000159c      0x254 build/alliecat_candythecatacorn/sam_ba_monitor.o
+                0x000000000000159c                sam_ba_monitor_run
+ .text          0x00000000000017f0       0x88 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+                0x00000000000017f0                memcpy
+ .text          0x0000000000001878       0x9c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
+                0x0000000000001878                memset
+ .text          0x0000000000001914       0x64 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
+                0x0000000000001914                strlen
  *(.glue_7t)
- .glue_7t       0x00000000000018f8        0x0 linker stubs
+ .glue_7t       0x0000000000001978        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x00000000000018f8        0x0 linker stubs
+ .glue_7        0x0000000000001978        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
- .rodata        0x00000000000018f8       0x10 build/alliecat_candythecatacorn/cdc_enumerate.o
+ .rodata        0x0000000000001978       0x10 build/alliecat_candythecatacorn/cdc_enumerate.o
  .rodata.devDescriptor
-                0x0000000000001908       0x12 build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x0000000000001908                devDescriptor
- *fill*         0x000000000000191a        0x2 
- .rodata.hidDescriptor
-                0x000000000000191c       0x21 build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x000000000000191c                hidDescriptor
+                0x0000000000001988       0x12 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x0000000000001988                devDescriptor
  .rodata.str1.1
-                0x000000000000193d       0x1c build/alliecat_candythecatacorn/cdc_enumerate.o
- *fill*         0x0000000000001959        0x3 
+                0x000000000000199a       0x1c build/alliecat_candythecatacorn/cdc_enumerate.o
+ *fill*         0x00000000000019b6        0x2 
  .rodata.string_descriptors
-                0x000000000000195c       0x10 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x00000000000019b8       0x10 build/alliecat_candythecatacorn/cdc_enumerate.o
  .rodata.BootBlock
-                0x000000000000196c       0x3e build/alliecat_candythecatacorn/fat.o
+                0x00000000000019c8       0x3e build/alliecat_candythecatacorn/fat.o
  .rodata.indexFile
-                0x00000000000019aa       0x86 build/alliecat_candythecatacorn/fat.o
-                0x00000000000019aa                indexFile
- .rodata.info   0x0000000000001a30       0x30 build/alliecat_candythecatacorn/fat.o
+                0x0000000000001a06       0x86 build/alliecat_candythecatacorn/fat.o
+                0x0000000000001a06                indexFile
+ .rodata.info   0x0000000000001a8c       0x30 build/alliecat_candythecatacorn/fat.o
  .rodata.infoUf2File
-                0x0000000000001a60       0x67 build/alliecat_candythecatacorn/fat.o
-                0x0000000000001a60                infoUf2File
- .rodata        0x0000000000001ac7        0xc build/alliecat_candythecatacorn/msc.o
+                0x0000000000001abc       0x66 build/alliecat_candythecatacorn/fat.o
+                0x0000000000001abc                infoUf2File
+ .rodata        0x0000000000001b22        0xc build/alliecat_candythecatacorn/msc.o
  .rodata.process_msc.str1.1
-                0x0000000000001ad3       0x13 build/alliecat_candythecatacorn/msc.o
+                0x0000000000001b2e       0x13 build/alliecat_candythecatacorn/msc.o
+ .rodata.fullVersion
+                0x0000000000001b2e       0x2a build/alliecat_candythecatacorn/sam_ba_monitor.o
+ .rodata.sam_ba_monitor_run.str1.1
+                0x0000000000001b58       0x10 build/alliecat_candythecatacorn/sam_ba_monitor.o
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000001ae8                . = ALIGN (0x4)
- *fill*         0x0000000000001ad3        0x1 
+                0x0000000000001b68                . = ALIGN (0x4)
  *(.init)
-                0x0000000000001ad4                . = ALIGN (0x4)
-                0x0000000000001ad4                __preinit_array_start = .
+                0x0000000000001b68                . = ALIGN (0x4)
+                0x0000000000001b68                __preinit_array_start = .
  *(.preinit_array)
-                0x0000000000001ad4                __preinit_array_end = .
-                0x0000000000001ad4                . = ALIGN (0x4)
-                0x0000000000001ad4                __init_array_start = .
+                0x0000000000001b68                __preinit_array_end = .
+                0x0000000000001b68                . = ALIGN (0x4)
+                0x0000000000001b68                __init_array_start = .
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
-                0x0000000000001ad4                __init_array_end = .
-                0x0000000000001ad4                . = ALIGN (0x4)
+                0x0000000000001b68                __init_array_end = .
+                0x0000000000001b68                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *crtend.o(.ctors)
-                0x0000000000001ad4                . = ALIGN (0x4)
-                0x0000000000001ad4                _efixed = .
+                0x0000000000001b68                . = ALIGN (0x4)
+                0x0000000000001b68                _efixed = .
                 [!provide]                        PROVIDE (__exidx_start = .)
 
-.vfp11_veneer   0x0000000000001ad4        0x0
- .vfp11_veneer  0x0000000000001ad4        0x0 linker stubs
+.vfp11_veneer   0x0000000000001b68        0x0
+ .vfp11_veneer  0x0000000000001b68        0x0 linker stubs
 
-.v4_bx          0x0000000000001ad4        0x0
- .v4_bx         0x0000000000001ad4        0x0 linker stubs
+.v4_bx          0x0000000000001b68        0x0
+ .v4_bx         0x0000000000001b68        0x0 linker stubs
 
-.iplt           0x0000000000001ad4        0x0
- .iplt          0x0000000000001ad4        0x0 build/alliecat_candythecatacorn/flash_samd21.o
+.iplt           0x0000000000001b68        0x0
+ .iplt          0x0000000000001b68        0x0 build/alliecat_candythecatacorn/flash_samd21.o
 
-.igot.plt       0x0000000000001ad4        0x0
- .igot.plt      0x0000000000001ad4        0x0 build/alliecat_candythecatacorn/flash_samd21.o
+.igot.plt       0x0000000000001b68        0x0
+ .igot.plt      0x0000000000001b68        0x0 build/alliecat_candythecatacorn/flash_samd21.o
 
-.rel.dyn        0x0000000000001ad4        0x0
- .rel.iplt      0x0000000000001ad4        0x0 build/alliecat_candythecatacorn/flash_samd21.o
+.rel.dyn        0x0000000000001b68        0x0
+ .rel.iplt      0x0000000000001b68        0x0 build/alliecat_candythecatacorn/flash_samd21.o
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
                 [!provide]                        PROVIDE (__exidx_end = .)
-                0x0000000000001ad4                . = ALIGN (0x4)
-                0x0000000000001ad4                _etext = .
+                0x0000000000001b68                . = ALIGN (0x4)
+                0x0000000000001b68                _etext = .
 
-.relocate       0x0000000020000000      0x180 load address 0x0000000000001ad4
+.relocate       0x0000000020000000       0xac load address 0x0000000000001b68
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _srelocate = .
  *(.ramfunc .ramfunc.*)
@@ -543,138 +514,146 @@ END GROUP
  .data.limit    0x0000000020000001        0x1 build/alliecat_candythecatacorn/utils.o
  *fill*         0x0000000020000002        0x2 
  .data.bosDescriptor
-                0x0000000020000004       0x39 build/alliecat_candythecatacorn/cdc_enumerate.o
- *fill*         0x000000002000003d        0x3 
+                0x0000000020000004        0x5 build/alliecat_candythecatacorn/cdc_enumerate.o
+ *fill*         0x0000000020000009        0x3 
  .data.cfgDescriptor
-                0x0000000020000040       0x57 build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x0000000020000040                cfgDescriptor
- *fill*         0x0000000020000097        0x1 
- .data.hidCfgDescriptor
-                0x0000000020000098        0x9 build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x0000000020000098                hidCfgDescriptor
- *fill*         0x00000000200000a1        0x3 
- .data.msOS20Descriptor
-                0x00000000200000a4       0xaa build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x000000002000000c       0x62 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x000000002000000c                cfgDescriptor
+ *fill*         0x000000002000006e        0x2 
+ .data.line_coding
+                0x0000000020000070        0x8 build/alliecat_candythecatacorn/cdc_enumerate.o
  .data.udi_msc_csw
-                0x000000002000014e        0xd build/alliecat_candythecatacorn/msc.o
- *fill*         0x000000002000015b        0x1 
+                0x0000000020000078        0xd build/alliecat_candythecatacorn/msc.o
+ *fill*         0x0000000020000085        0x3 
  .data.udi_msc_inquiry_data.12032
-                0x000000002000015c       0x24 build/alliecat_candythecatacorn/msc.o
-                0x0000000020000180                . = ALIGN (0x4)
-                0x0000000020000180                _erelocate = .
+                0x0000000020000088       0x24 build/alliecat_candythecatacorn/msc.o
+                0x00000000200000ac                . = ALIGN (0x4)
+                0x00000000200000ac                _erelocate = .
 
-.bss            0x0000000020000180      0xb98 load address 0x0000000000001c54
-                0x0000000020000180                . = ALIGN (0x4)
-                0x0000000020000180                _sbss = .
-                0x0000000020000180                _szero = .
+.bss            0x00000000200000ac      0x8f8 load address 0x0000000000001c14
+                0x00000000200000ac                . = ALIGN (0x4)
+                0x00000000200000ac                _sbss = .
+                0x00000000200000ac                _szero = .
  *(.bss .bss.*)
- .bss.crcCache  0x0000000020000180      0x200 build/alliecat_candythecatacorn/usart_sam_ba.o
- .bss.now       0x0000000020000380        0x4 build/alliecat_candythecatacorn/utils.o
+ .bss.crcCache  0x00000000200000ac      0x200 build/alliecat_candythecatacorn/usart_sam_ba.o
+ .bss.now       0x00000000200002ac        0x4 build/alliecat_candythecatacorn/utils.o
  .bss.signal_end
-                0x0000000020000384        0x4 build/alliecat_candythecatacorn/utils.o
- .bss.timerLow  0x0000000020000388        0x4 build/alliecat_candythecatacorn/utils.o
+                0x00000000200002b0        0x4 build/alliecat_candythecatacorn/utils.o
+ .bss.timerLow  0x00000000200002b4        0x4 build/alliecat_candythecatacorn/utils.o
  .bss.currentConfiguration
-                0x000000002000038c        0x1 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x00000000200002b8        0x1 build/alliecat_candythecatacorn/cdc_enumerate.o
  .bss.serial_number
-                0x000000002000038d       0x21 build/alliecat_candythecatacorn/cdc_enumerate.o
- .bss.wLength   0x00000000200003ae        0x2 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x00000000200002b9       0x21 build/alliecat_candythecatacorn/cdc_enumerate.o
+ .bss.wLength   0x00000000200002da        0x2 build/alliecat_candythecatacorn/cdc_enumerate.o
  .bss.main_b_cdc_enable
-                0x00000000200003b0        0x1 build/alliecat_candythecatacorn/main.o
- *fill*         0x00000000200003b1        0x3 
+                0x00000000200002dc        0x1 build/alliecat_candythecatacorn/main.o
+ *fill*         0x00000000200002dd        0x3 
  .bss.block_buffer
-                0x00000000200003b4      0x200 build/alliecat_candythecatacorn/msc.o
+                0x00000000200002e0      0x200 build/alliecat_candythecatacorn/msc.o
  .bss.sense.12055
-                0x00000000200005b4       0x14 build/alliecat_candythecatacorn/msc.o
+                0x00000000200004e0       0x14 build/alliecat_candythecatacorn/msc.o
  .bss.udi_msc_capacity.12065
-                0x00000000200005c8        0x8 build/alliecat_candythecatacorn/msc.o
+                0x00000000200004f4        0x8 build/alliecat_candythecatacorn/msc.o
  .bss.udi_msc_cbw
-                0x00000000200005d0       0x1f build/alliecat_candythecatacorn/msc.o
+                0x00000000200004fc       0x1f build/alliecat_candythecatacorn/msc.o
  .bss.udi_msc_sense
-                0x00000000200005ef       0x12 build/alliecat_candythecatacorn/msc.o
- *fill*         0x0000000020000601        0x3 
+                0x000000002000051b       0x12 build/alliecat_candythecatacorn/msc.o
+ *fill*         0x000000002000052d        0x3 
  .bss.usbWriteState
-                0x0000000020000604       0x98 build/alliecat_candythecatacorn/msc.o
- .bss.hidbufData
-                0x000000002000069c      0x188 build/alliecat_candythecatacorn/hid.o
- .bss.webbufData
-                0x0000000020000824      0x188 build/alliecat_candythecatacorn/hid.o
+                0x0000000020000530       0x98 build/alliecat_candythecatacorn/msc.o
+ .bss.b_sam_ba_interface_usart
+                0x00000000200005c8        0x1 build/alliecat_candythecatacorn/sam_ba_monitor.o
+                0x00000000200005c8                b_sam_ba_interface_usart
+ *fill*         0x00000000200005c9        0x3 
+ .bss.src_buff_addr.11477
+                0x00000000200005cc        0x4 build/alliecat_candythecatacorn/sam_ba_monitor.o
  *(COMMON)
- COMMON         0x00000000200009ac        0x8 build/alliecat_candythecatacorn/utils.o
-                0x00000000200009ac                timerHigh
-                0x00000000200009b0                resetHorizon
- COMMON         0x00000000200009b4      0x364 build/alliecat_candythecatacorn/cdc_enumerate.o
-                0x00000000200009b4                ctrlOutCache
-                0x00000000200009f8                usb_endpoint_table
-                0x0000000020000af8                endpointCache
-                0x0000000020000d18                . = ALIGN (0x4)
-                0x0000000020000d18                _ebss = .
-                0x0000000020000d18                _ezero = .
+ COMMON         0x00000000200005d0        0x8 build/alliecat_candythecatacorn/utils.o
+                0x00000000200005d0                timerHigh
+                0x00000000200005d4                resetHorizon
+ COMMON         0x00000000200005d8      0x364 build/alliecat_candythecatacorn/cdc_enumerate.o
+                0x00000000200005d8                ctrlOutCache
+                0x000000002000061c                usb_endpoint_table
+                0x000000002000071c                endpointCache
+ COMMON         0x000000002000093c       0x68 build/alliecat_candythecatacorn/sam_ba_monitor.o
+                0x000000002000093c                j
+                0x0000000020000940                length
+                0x0000000020000944                ptr
+                0x0000000020000948                command
+                0x000000002000094c                i
+                0x0000000020000950                data
+                0x0000000020000994                ptr_data
+                0x0000000020000998                sp
+                0x000000002000099c                current_number
+                0x00000000200009a0                u32tmp
+                0x00000000200009a4                . = ALIGN (0x4)
+                0x00000000200009a4                _ebss = .
+                0x00000000200009a4                _ezero = .
 
-.stack          0x0000000020000d18     0x2000 load address 0x00000000000027ec
-                0x0000000020000d18                . = ALIGN (0x8)
-                0x0000000020000d18                _sstack = .
-                0x0000000020002d18                . = (. + STACK_SIZE)
- *fill*         0x0000000020000d18     0x2000 
-                0x0000000020002d18                . = ALIGN (0x8)
-                0x0000000020002d18                _estack = .
-                0x0000000020002d18                . = ALIGN (0x4)
-                0x0000000020002d18                _end = .
+.stack          0x00000000200009a4     0x2004 load address 0x000000000000250c
+                0x00000000200009a8                . = ALIGN (0x8)
+ *fill*         0x00000000200009a4        0x4 
+                0x00000000200009a8                _sstack = .
+                0x00000000200029a8                . = (. + STACK_SIZE)
+ *fill*         0x00000000200009a8     0x2000 
+                0x00000000200029a8                . = ALIGN (0x8)
+                0x00000000200029a8                _estack = .
+                0x00000000200029a8                . = ALIGN (0x4)
+                0x00000000200029a8                _end = .
                 0x0000000000001ff0                _binfo_start = 0x1ff0
 
 .binfo          0x0000000000001ff0       0x10
  *(.binfo)
  .binfo         0x0000000000001ff0       0x10 build/alliecat_candythecatacorn/msc.o
                 0x0000000000001ff0                binfo
-OUTPUT(build/alliecat_candythecatacorn/bootloader-alliecat_candythecatacorn-v3.4.0-65-gdf89a1f-dirty.elf elf32-littlearm)
+OUTPUT(build/alliecat_candythecatacorn/bootloader-alliecat_candythecatacorn-v3.4.0-66-gc8f99de-dirty.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x19624
+.debug_info     0x0000000000000000    0x1916f
  .debug_info    0x0000000000000000      0xf9b build/alliecat_candythecatacorn/flash_samd21.o
  .debug_info    0x0000000000000f9b     0x231e build/alliecat_candythecatacorn/init_samd21.o
  .debug_info    0x00000000000032b9     0x35c5 build/alliecat_candythecatacorn/startup_samd21.o
  .debug_info    0x000000000000687e     0x3cf9 build/alliecat_candythecatacorn/usart_sam_ba.o
  .debug_info    0x000000000000a577     0x1378 build/alliecat_candythecatacorn/utils.o
- .debug_info    0x000000000000b8ef     0x437a build/alliecat_candythecatacorn/cdc_enumerate.o
- .debug_info    0x000000000000fc69      0xfd5 build/alliecat_candythecatacorn/fat.o
- .debug_info    0x0000000000010c3e     0x1983 build/alliecat_candythecatacorn/main.o
- .debug_info    0x00000000000125c1     0x38b0 build/alliecat_candythecatacorn/msc.o
- .debug_info    0x0000000000015e71     0x125d build/alliecat_candythecatacorn/hid.o
- .debug_info    0x00000000000170ce       0x26 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_thumb1_case_uqi.o)
- .debug_info    0x00000000000170f4      0xe36 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
- .debug_info    0x0000000000017f2a      0xe1d /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
- .debug_info    0x0000000000018d47      0x8dd /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
+ .debug_info    0x000000000000b8ef     0x4366 build/alliecat_candythecatacorn/cdc_enumerate.o
+ .debug_info    0x000000000000fc55      0xfd5 build/alliecat_candythecatacorn/fat.o
+ .debug_info    0x0000000000010c2a     0x1983 build/alliecat_candythecatacorn/main.o
+ .debug_info    0x00000000000125ad     0x389c build/alliecat_candythecatacorn/msc.o
+ .debug_info    0x0000000000015e49      0xdf6 build/alliecat_candythecatacorn/sam_ba_monitor.o
+ .debug_info    0x0000000000016c3f      0xe36 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_info    0x0000000000017a75      0xe1d /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
+ .debug_info    0x0000000000018892      0x8dd /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
 
-.debug_abbrev   0x0000000000000000     0x295b
+.debug_abbrev   0x0000000000000000     0x28e3
  .debug_abbrev  0x0000000000000000      0x2c1 build/alliecat_candythecatacorn/flash_samd21.o
  .debug_abbrev  0x00000000000002c1      0x32c build/alliecat_candythecatacorn/init_samd21.o
  .debug_abbrev  0x00000000000005ed      0x25b build/alliecat_candythecatacorn/startup_samd21.o
  .debug_abbrev  0x0000000000000848      0x48b build/alliecat_candythecatacorn/usart_sam_ba.o
  .debug_abbrev  0x0000000000000cd3      0x371 build/alliecat_candythecatacorn/utils.o
- .debug_abbrev  0x0000000000001044      0x4da build/alliecat_candythecatacorn/cdc_enumerate.o
- .debug_abbrev  0x000000000000151e      0x319 build/alliecat_candythecatacorn/fat.o
- .debug_abbrev  0x0000000000001837      0x35d build/alliecat_candythecatacorn/main.o
- .debug_abbrev  0x0000000000001b94      0x4fd build/alliecat_candythecatacorn/msc.o
- .debug_abbrev  0x0000000000002091      0x3d8 build/alliecat_candythecatacorn/hid.o
- .debug_abbrev  0x0000000000002469       0x14 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_thumb1_case_uqi.o)
- .debug_abbrev  0x000000000000247d      0x1b4 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
- .debug_abbrev  0x0000000000002631      0x1a8 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
- .debug_abbrev  0x00000000000027d9      0x182 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
+ .debug_abbrev  0x0000000000001044      0x4c8 build/alliecat_candythecatacorn/cdc_enumerate.o
+ .debug_abbrev  0x000000000000150c      0x319 build/alliecat_candythecatacorn/fat.o
+ .debug_abbrev  0x0000000000001825      0x35d build/alliecat_candythecatacorn/main.o
+ .debug_abbrev  0x0000000000001b82      0x4fd build/alliecat_candythecatacorn/msc.o
+ .debug_abbrev  0x000000000000207f      0x386 build/alliecat_candythecatacorn/sam_ba_monitor.o
+ .debug_abbrev  0x0000000000002405      0x1b4 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_abbrev  0x00000000000025b9      0x1a8 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
+ .debug_abbrev  0x0000000000002761      0x182 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
 
-.debug_loc      0x0000000000000000     0x2c33
+.debug_loc      0x0000000000000000     0x292a
  .debug_loc     0x0000000000000000      0x3a6 build/alliecat_candythecatacorn/flash_samd21.o
  .debug_loc     0x00000000000003a6       0x78 build/alliecat_candythecatacorn/init_samd21.o
  .debug_loc     0x000000000000041e       0x2b build/alliecat_candythecatacorn/startup_samd21.o
  .debug_loc     0x0000000000000449      0x7d4 build/alliecat_candythecatacorn/usart_sam_ba.o
  .debug_loc     0x0000000000000c1d      0x18f build/alliecat_candythecatacorn/utils.o
- .debug_loc     0x0000000000000dac      0xac1 build/alliecat_candythecatacorn/cdc_enumerate.o
- .debug_loc     0x000000000000186d      0x4b7 build/alliecat_candythecatacorn/fat.o
- .debug_loc     0x0000000000001d24       0x6e build/alliecat_candythecatacorn/main.o
- .debug_loc     0x0000000000001d92      0x495 build/alliecat_candythecatacorn/msc.o
- .debug_loc     0x0000000000002227      0x498 build/alliecat_candythecatacorn/hid.o
- .debug_loc     0x00000000000026bf      0x33b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
- .debug_loc     0x00000000000029fa      0x1a5 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
- .debug_loc     0x0000000000002b9f       0x94 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
+ .debug_loc     0x0000000000000dac      0xa7b build/alliecat_candythecatacorn/cdc_enumerate.o
+ .debug_loc     0x0000000000001827      0x4b7 build/alliecat_candythecatacorn/fat.o
+ .debug_loc     0x0000000000001cde       0x6e build/alliecat_candythecatacorn/main.o
+ .debug_loc     0x0000000000001d4c      0x495 build/alliecat_candythecatacorn/msc.o
+ .debug_loc     0x00000000000021e1      0x1d5 build/alliecat_candythecatacorn/sam_ba_monitor.o
+ .debug_loc     0x00000000000023b6      0x33b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_loc     0x00000000000026f1      0x1a5 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
+ .debug_loc     0x0000000000002896       0x94 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
 
-.debug_aranges  0x0000000000000000      0x3d8
+.debug_aranges  0x0000000000000000      0x3b0
  .debug_aranges
                 0x0000000000000000       0x48 build/alliecat_candythecatacorn/flash_samd21.o
  .debug_aranges
@@ -694,45 +673,42 @@ OUTPUT(build/alliecat_candythecatacorn/bootloader-alliecat_candythecatacorn-v3.4
  .debug_aranges
                 0x0000000000000290       0x80 build/alliecat_candythecatacorn/msc.o
  .debug_aranges
-                0x0000000000000310       0x48 build/alliecat_candythecatacorn/hid.o
+                0x0000000000000310       0x40 build/alliecat_candythecatacorn/sam_ba_monitor.o
  .debug_aranges
-                0x0000000000000358       0x20 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_thumb1_case_uqi.o)
+                0x0000000000000350       0x20 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
  .debug_aranges
-                0x0000000000000378       0x20 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+                0x0000000000000370       0x20 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
  .debug_aranges
-                0x0000000000000398       0x20 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
- .debug_aranges
-                0x00000000000003b8       0x20 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
+                0x0000000000000390       0x20 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
 
-.debug_ranges   0x0000000000000000      0x520
+.debug_ranges   0x0000000000000000      0x518
  .debug_ranges  0x0000000000000000       0x70 build/alliecat_candythecatacorn/flash_samd21.o
  .debug_ranges  0x0000000000000070       0x48 build/alliecat_candythecatacorn/init_samd21.o
  .debug_ranges  0x00000000000000b8       0x20 build/alliecat_candythecatacorn/startup_samd21.o
  .debug_ranges  0x00000000000000d8       0x78 build/alliecat_candythecatacorn/usart_sam_ba.o
  .debug_ranges  0x0000000000000150       0xb0 build/alliecat_candythecatacorn/utils.o
- .debug_ranges  0x0000000000000200       0xd0 build/alliecat_candythecatacorn/cdc_enumerate.o
- .debug_ranges  0x00000000000002d0       0xc8 build/alliecat_candythecatacorn/fat.o
- .debug_ranges  0x0000000000000398       0x28 build/alliecat_candythecatacorn/main.o
- .debug_ranges  0x00000000000003c0       0xd8 build/alliecat_candythecatacorn/msc.o
- .debug_ranges  0x0000000000000498       0x88 build/alliecat_candythecatacorn/hid.o
+ .debug_ranges  0x0000000000000200       0xf0 build/alliecat_candythecatacorn/cdc_enumerate.o
+ .debug_ranges  0x00000000000002f0       0xc8 build/alliecat_candythecatacorn/fat.o
+ .debug_ranges  0x00000000000003b8       0x28 build/alliecat_candythecatacorn/main.o
+ .debug_ranges  0x00000000000003e0       0xd8 build/alliecat_candythecatacorn/msc.o
+ .debug_ranges  0x00000000000004b8       0x60 build/alliecat_candythecatacorn/sam_ba_monitor.o
 
-.debug_line     0x0000000000000000     0x221b
+.debug_line     0x0000000000000000     0x222d
  .debug_line    0x0000000000000000      0x23c build/alliecat_candythecatacorn/flash_samd21.o
  .debug_line    0x000000000000023c      0x245 build/alliecat_candythecatacorn/init_samd21.o
  .debug_line    0x0000000000000481      0x19c build/alliecat_candythecatacorn/startup_samd21.o
  .debug_line    0x000000000000061d      0x3d2 build/alliecat_candythecatacorn/usart_sam_ba.o
  .debug_line    0x00000000000009ef      0x306 build/alliecat_candythecatacorn/utils.o
- .debug_line    0x0000000000000cf5      0x47b build/alliecat_candythecatacorn/cdc_enumerate.o
- .debug_line    0x0000000000001170      0x29f build/alliecat_candythecatacorn/fat.o
- .debug_line    0x000000000000140f      0x22f build/alliecat_candythecatacorn/main.o
- .debug_line    0x000000000000163e      0x475 build/alliecat_candythecatacorn/msc.o
- .debug_line    0x0000000000001ab3      0x250 build/alliecat_candythecatacorn/hid.o
- .debug_line    0x0000000000001d03       0x65 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_thumb1_case_uqi.o)
- .debug_line    0x0000000000001d68      0x1b9 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
- .debug_line    0x0000000000001f21      0x1b4 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
- .debug_line    0x00000000000020d5      0x146 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
+ .debug_line    0x0000000000000cf5      0x483 build/alliecat_candythecatacorn/cdc_enumerate.o
+ .debug_line    0x0000000000001178      0x29f build/alliecat_candythecatacorn/fat.o
+ .debug_line    0x0000000000001417      0x248 build/alliecat_candythecatacorn/main.o
+ .debug_line    0x000000000000165f      0x476 build/alliecat_candythecatacorn/msc.o
+ .debug_line    0x0000000000001ad5      0x2a5 build/alliecat_candythecatacorn/sam_ba_monitor.o
+ .debug_line    0x0000000000001d7a      0x1b9 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_line    0x0000000000001f33      0x1b4 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
+ .debug_line    0x00000000000020e7      0x146 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
 
-.debug_str      0x0000000000000000     0x421d
+.debug_str      0x0000000000000000     0x409b
  .debug_str     0x0000000000000000      0x71d build/alliecat_candythecatacorn/flash_samd21.o
                                         0x82e (size before relaxing)
  .debug_str     0x000000000000071d      0x6da build/alliecat_candythecatacorn/init_samd21.o
@@ -743,22 +719,21 @@ OUTPUT(build/alliecat_candythecatacorn/bootloader-alliecat_candythecatacorn-v3.4
                                        0x13f9 (size before relaxing)
  .debug_str     0x0000000000002910       0xd2 build/alliecat_candythecatacorn/utils.o
                                         0x8a8 (size before relaxing)
- .debug_str     0x00000000000029e2      0x3d0 build/alliecat_candythecatacorn/cdc_enumerate.o
-                                       0x15f0 (size before relaxing)
- .debug_str     0x0000000000002db2      0x29f build/alliecat_candythecatacorn/fat.o
+ .debug_str     0x00000000000029e2      0x40e build/alliecat_candythecatacorn/cdc_enumerate.o
+                                       0x1636 (size before relaxing)
+ .debug_str     0x0000000000002df0      0x29f build/alliecat_candythecatacorn/fat.o
                                         0x929 (size before relaxing)
- .debug_str     0x0000000000003051       0x7f build/alliecat_candythecatacorn/main.o
-                                        0xb21 (size before relaxing)
- .debug_str     0x00000000000030d0      0x9d0 build/alliecat_candythecatacorn/msc.o
-                                       0x18ed (size before relaxing)
- .debug_str     0x0000000000003aa0      0x1ff build/alliecat_candythecatacorn/hid.o
-                                        0x914 (size before relaxing)
- .debug_str     0x0000000000003c9f       0x77 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_thumb1_case_uqi.o)
- .debug_str     0x0000000000003d16      0x43e /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_str     0x000000000000308f       0x86 build/alliecat_candythecatacorn/main.o
+                                        0xb28 (size before relaxing)
+ .debug_str     0x0000000000003115      0x9d0 build/alliecat_candythecatacorn/msc.o
+                                       0x18e1 (size before relaxing)
+ .debug_str     0x0000000000003ae5       0xa9 build/alliecat_candythecatacorn/sam_ba_monitor.o
+                                        0x7d2 (size before relaxing)
+ .debug_str     0x0000000000003b8e      0x43e /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
                                         0x918 (size before relaxing)
- .debug_str     0x0000000000004154       0x8b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
+ .debug_str     0x0000000000003fcc       0x8b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
                                         0x8f3 (size before relaxing)
- .debug_str     0x00000000000041df       0x3e /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
+ .debug_str     0x0000000000004057       0x44 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
                                         0x5ef (size before relaxing)
 
 .comment        0x0000000000000000       0xae
@@ -772,7 +747,7 @@ OUTPUT(build/alliecat_candythecatacorn/bootloader-alliecat_candythecatacorn-v3.4
  .comment       0x0000000000000057       0x58 build/alliecat_candythecatacorn/fat.o
  .comment       0x0000000000000057       0x58 build/alliecat_candythecatacorn/main.o
  .comment       0x0000000000000057       0x58 build/alliecat_candythecatacorn/msc.o
- .comment       0x0000000000000057       0x58 build/alliecat_candythecatacorn/hid.o
+ .comment       0x0000000000000057       0x58 build/alliecat_candythecatacorn/sam_ba_monitor.o
  .comment       0x0000000000000057       0x57 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
                                          0x58 (size before relaxing)
  .comment       0x00000000000000ae       0x58 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
@@ -799,17 +774,15 @@ OUTPUT(build/alliecat_candythecatacorn/bootloader-alliecat_candythecatacorn-v3.4
  .ARM.attributes
                 0x0000000000000190       0x32 build/alliecat_candythecatacorn/msc.o
  .ARM.attributes
-                0x00000000000001c2       0x32 build/alliecat_candythecatacorn/hid.o
+                0x00000000000001c2       0x32 build/alliecat_candythecatacorn/sam_ba_monitor.o
  .ARM.attributes
-                0x00000000000001f4       0x1e /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_thumb1_case_uqi.o)
+                0x00000000000001f4       0x2c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x0000000000000212       0x2c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+                0x0000000000000220       0x2c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x000000000000023e       0x2c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
- .ARM.attributes
-                0x000000000000026a       0x2c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
+                0x000000000000024c       0x2c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
 
-.debug_frame    0x0000000000000000      0x910
+.debug_frame    0x0000000000000000      0x8e8
  .debug_frame   0x0000000000000000       0xb4 build/alliecat_candythecatacorn/flash_samd21.o
  .debug_frame   0x00000000000000b4       0x68 build/alliecat_candythecatacorn/init_samd21.o
  .debug_frame   0x000000000000011c       0x4c build/alliecat_candythecatacorn/startup_samd21.o
@@ -819,10 +792,10 @@ OUTPUT(build/alliecat_candythecatacorn/bootloader-alliecat_candythecatacorn-v3.4
  .debug_frame   0x00000000000005bc       0x68 build/alliecat_candythecatacorn/fat.o
  .debug_frame   0x0000000000000624       0x34 build/alliecat_candythecatacorn/main.o
  .debug_frame   0x0000000000000658      0x170 build/alliecat_candythecatacorn/msc.o
- .debug_frame   0x00000000000007c8       0xc0 build/alliecat_candythecatacorn/hid.o
- .debug_frame   0x0000000000000888       0x30 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00000000000008b8       0x30 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
- .debug_frame   0x00000000000008e8       0x28 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
+ .debug_frame   0x00000000000007c8       0x98 build/alliecat_candythecatacorn/sam_ba_monitor.o
+ .debug_frame   0x0000000000000860       0x30 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000000000000890       0x30 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000000008c0       0x28 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
 
 Cross Reference Table
 
@@ -869,16 +842,12 @@ USB_Read                                          build/alliecat_candythecatacor
 USB_ReadBlocking                                  build/alliecat_candythecatacorn/cdc_enumerate.o
                                                   build/alliecat_candythecatacorn/msc.o
 USB_ReadCore                                      build/alliecat_candythecatacorn/cdc_enumerate.o
-                                                  build/alliecat_candythecatacorn/hid.o
                                                   build/alliecat_candythecatacorn/msc.o
 USB_Write                                         build/alliecat_candythecatacorn/cdc_enumerate.o
                                                   build/alliecat_candythecatacorn/msc.o
 USB_WriteCore                                     build/alliecat_candythecatacorn/cdc_enumerate.o
-                                                  build/alliecat_candythecatacorn/hid.o
                                                   build/alliecat_candythecatacorn/msc.o
 WDT_Handler                                       build/alliecat_candythecatacorn/startup_samd21.o
-__gnu_thumb1_case_uqi                             /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_thumb1_case_uqi.o)
-                                                  build/alliecat_candythecatacorn/hid.o
 _erelocate                                        build/alliecat_candythecatacorn/startup_samd21.o
 _estack                                           build/alliecat_candythecatacorn/startup_samd21.o
 _etext                                            build/alliecat_candythecatacorn/startup_samd21.o
@@ -887,7 +856,6 @@ _sfixed                                           build/alliecat_candythecatacor
 _srelocate                                        build/alliecat_candythecatacorn/startup_samd21.o
 _szero                                            build/alliecat_candythecatacorn/startup_samd21.o
 add_crc                                           build/alliecat_candythecatacorn/usart_sam_ba.o
-                                                  build/alliecat_candythecatacorn/hid.o
                                                   build/alliecat_candythecatacorn/sam_ba_monitor.o
 arrowLogo                                         build/alliecat_candythecatacorn/images.o
 b_sam_ba_interface_usart                          build/alliecat_candythecatacorn/sam_ba_monitor.o
@@ -908,7 +876,6 @@ cdc_write_buf_xmd                                 build/alliecat_candythecatacor
 cfgDescriptor                                     build/alliecat_candythecatacorn/cdc_enumerate.o
 command                                           build/alliecat_candythecatacorn/sam_ba_monitor.o
 copy_words                                        build/alliecat_candythecatacorn/flash_samd21.o
-                                                  build/alliecat_candythecatacorn/hid.o
 ctrlOutCache                                      build/alliecat_candythecatacorn/cdc_enumerate.o
 current_number                                    build/alliecat_candythecatacorn/sam_ba_monitor.o
 data                                              build/alliecat_candythecatacorn/sam_ba_monitor.o
@@ -924,7 +891,6 @@ flash_erase_to_end                                build/alliecat_candythecatacor
                                                   build/alliecat_candythecatacorn/sam_ba_monitor.o
 flash_write                                       build/alliecat_candythecatacorn/flash_samd21.o
 flash_write_row                                   build/alliecat_candythecatacorn/flash_samd21.o
-                                                  build/alliecat_candythecatacorn/hid.o
                                                   build/alliecat_candythecatacorn/fat.o
 flash_write_words                                 build/alliecat_candythecatacorn/flash_samd21.o
                                                   build/alliecat_candythecatacorn/sam_ba_monitor.o
@@ -932,11 +898,6 @@ font8                                             build/alliecat_candythecatacor
 g_interrupt_enabled                               build/alliecat_candythecatacorn/init_samd21.o
 getPacket                                         build/alliecat_candythecatacorn/usart_sam_ba.o
 handoverPrep                                      build/alliecat_candythecatacorn/msc.o
-                                                  build/alliecat_candythecatacorn/hid.o
-hidCfgDescriptor                                  build/alliecat_candythecatacorn/cdc_enumerate.o
-hidDescriptor                                     build/alliecat_candythecatacorn/cdc_enumerate.o
-hidHandoverLoop                                   build/alliecat_candythecatacorn/hid.o
-                                                  build/alliecat_candythecatacorn/msc.o
 i                                                 build/alliecat_candythecatacorn/sam_ba_monitor.o
 idx_rx_read                                       build/alliecat_candythecatacorn/usart_sam_ba.o
 idx_rx_write                                      build/alliecat_candythecatacorn/usart_sam_ba.o
@@ -944,7 +905,6 @@ idx_tx_read                                       build/alliecat_candythecatacor
 idx_tx_write                                      build/alliecat_candythecatacorn/usart_sam_ba.o
 indexFile                                         build/alliecat_candythecatacorn/fat.o
 infoUf2File                                       build/alliecat_candythecatacorn/fat.o
-                                                  build/alliecat_candythecatacorn/hid.o
                                                   build/alliecat_candythecatacorn/msc.o
 j                                                 build/alliecat_candythecatacorn/sam_ba_monitor.o
 led_init                                          build/alliecat_candythecatacorn/utils.o
@@ -960,13 +920,11 @@ length                                            build/alliecat_candythecatacor
 main                                              build/alliecat_candythecatacorn/main.o
                                                   build/alliecat_candythecatacorn/startup_samd21.o
 memcpy                                            /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memcpy-stub.o)
-                                                  build/alliecat_candythecatacorn/hid.o
                                                   build/alliecat_candythecatacorn/sam_ba_monitor.o
                                                   build/alliecat_candythecatacorn/msc.o
                                                   build/alliecat_candythecatacorn/fat.o
                                                   build/alliecat_candythecatacorn/cdc_enumerate.o
 memset                                            /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-memset.o)
-                                                  build/alliecat_candythecatacorn/hid.o
                                                   build/alliecat_candythecatacorn/msc.o
                                                   build/alliecat_candythecatacorn/fat.o
                                                   build/alliecat_candythecatacorn/cdc_enumerate.o
@@ -977,40 +935,31 @@ padded_memcpy                                     build/alliecat_candythecatacor
                                                   build/alliecat_candythecatacorn/msc.o
 panic                                             build/alliecat_candythecatacorn/utils.o
 pendriveLogo                                      build/alliecat_candythecatacorn/images.o
-process_core                                      build/alliecat_candythecatacorn/hid.o
-process_hid                                       build/alliecat_candythecatacorn/hid.o
-                                                  build/alliecat_candythecatacorn/msc.o
 process_msc                                       build/alliecat_candythecatacorn/msc.o
                                                   build/alliecat_candythecatacorn/sam_ba_monitor.o
-                                                  build/alliecat_candythecatacorn/main.o
 ptr                                               build/alliecat_candythecatacorn/sam_ba_monitor.o
 ptr_data                                          build/alliecat_candythecatacorn/sam_ba_monitor.o
 put_uint32                                        build/alliecat_candythecatacorn/sam_ba_monitor.o
 read_block                                        build/alliecat_candythecatacorn/fat.o
                                                   build/alliecat_candythecatacorn/msc.o
-recv_hf2                                          build/alliecat_candythecatacorn/hid.o
 resetHorizon                                      build/alliecat_candythecatacorn/utils.o
                                                   build/alliecat_candythecatacorn/main.o
                                                   build/alliecat_candythecatacorn/fat.o
 resetIntoApp                                      build/alliecat_candythecatacorn/utils.o
-                                                  build/alliecat_candythecatacorn/hid.o
                                                   build/alliecat_candythecatacorn/msc.o
 resetIntoBootloader                               build/alliecat_candythecatacorn/utils.o
-                                                  build/alliecat_candythecatacorn/hid.o
                                                   build/alliecat_candythecatacorn/msc.o
 reset_ep                                          build/alliecat_candythecatacorn/cdc_enumerate.o
                                                   build/alliecat_candythecatacorn/msc.o
 sam_ba_monitor_init                               build/alliecat_candythecatacorn/sam_ba_monitor.o
 sam_ba_monitor_run                                build/alliecat_candythecatacorn/sam_ba_monitor.o
+                                                  build/alliecat_candythecatacorn/main.o
 sam_ba_putdata_term                               build/alliecat_candythecatacorn/sam_ba_monitor.o
-send_hf2                                          build/alliecat_candythecatacorn/hid.o
-send_hf2_response                                 build/alliecat_candythecatacorn/hid.o
 size_of_data                                      build/alliecat_candythecatacorn/usart_sam_ba.o
 sp                                                build/alliecat_candythecatacorn/sam_ba_monitor.o
 stall_ep                                          build/alliecat_candythecatacorn/cdc_enumerate.o
                                                   build/alliecat_candythecatacorn/msc.o
 strlen                                            /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg_nano.a(lib_a-strlen-stub.o)
-                                                  build/alliecat_candythecatacorn/hid.o
                                                   build/alliecat_candythecatacorn/fat.o
                                                   build/alliecat_candythecatacorn/cdc_enumerate.o
 system_init                                       build/alliecat_candythecatacorn/init_samd21.o

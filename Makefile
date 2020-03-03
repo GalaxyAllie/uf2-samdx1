@@ -1,4 +1,4 @@
-BOARD=zero
+BOARD=alliecat_candythecatacorn
 -include Makefile.user
 include boards/$(BOARD)/board.mk
 CC=arm-none-eabi-gcc

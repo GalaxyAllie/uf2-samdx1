@@ -50,7 +50,7 @@
 // Enable index.htm file on the drive
 #define USE_INDEX_HTM 1 // 132 bytes
 // Enable USB CDC (Communication Device Class; i.e., USB serial) monitor for Arduino style flashing
-#define USE_CDC 1 // 1264 bytes (plus terminal, see below)
+#define USE_CDC 0 // 1264 bytes (plus terminal, see below)
 // Support the UART (real serial port, not USB)
 #define USE_UART 0
 // Support Human Interface Device (HID) - serial, flashing and debug

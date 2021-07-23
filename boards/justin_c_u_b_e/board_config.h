@@ -3,16 +3,16 @@
 
 #define CRYSTALLESS    1
 
-#define VENDOR_NAME "AllieCat"
-#define PRODUCT_NAME "Candy the Catacorn"
-#define VOLUME_LABEL "CANDYBOOT"
-#define INDEX_URL "https://github.com/MermaidAllie/Candy-the-Catacorn"
-#define BOARD_ID "SAMD21E18A-Candy"
+#define VENDOR_NAME "BurnerCon"
+#define PRODUCT_NAME "C_U_B_E"
+#define VOLUME_LABEL "CUBEBOT"
+#define INDEX_URL "https://github.com/BurnerCon/C_U_B_E"
+#define BOARD_ID "SAMD21E18A-C_U_B_E"
 
 #define USB_VID 0x04D8
-#define USB_PID 0xEC2F
+#define USB_PID 0xE8E5
 
-#define LED_PIN PIN_PA10
+#define LED_PIN PIN_PA02
 //#define LED_TX_PIN PIN_PA27
 //#define LED_RX_PIN PIN_PB03
 
